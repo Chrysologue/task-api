@@ -1,0 +1,34 @@
+### Get tasks by admin
+GET http://localhost:3001/tasks/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ODc3MmQyLWM5MjUtNGNiZi05YTg3LTUyZWNjOTgzNjQxYyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkxOTcyNzM4LCJleHAiOjE3OTE5NzYzMzh9.htIvfRxnpydF4CJ2f3-g295ytjKWI3g0a4D_JL1J_v4
+
+### Get all user's tasks
+GET http://localhost:3001/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ODc3MmQyLWM5MjUtNGNiZi05YTg3LTUyZWNjOTgzNjQxYyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkxOTcyNzM4LCJleHAiOjE3OTE5NzYzMzh9.htIvfRxnpydF4CJ2f3-g295ytjKWI3g0a4D_JL1J_v4
+
+### Get user task by ID
+GET http://localhost:3001/tasks/752b9bae-b58f-49bc-9f4f-1b811335f321
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ODc3MmQyLWM5MjUtNGNiZi05YTg3LTUyZWNjOTgzNjQxYyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkxOTcyNzM4LCJleHAiOjE3OTE5NzYzMzh9.htIvfRxnpydF4CJ2f3-g295ytjKWI3g0a4D_JL1J_v4
+
+### Create task
+POST http://localhost:3001/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ODc3MmQyLWM5MjUtNGNiZi05YTg3LTUyZWNjOTgzNjQxYyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkxOTcyNzM4LCJleHAiOjE3OTE5NzYzMzh9.htIvfRxnpydF4CJ2f3-g295ytjKWI3g0a4D_JL1J_v4
+Content-Type: application/json
+
+{
+    "title": "Finish Backend API",
+  "description": "Write and test the Express routes and PostgreSQL connection for user tasks."
+}
+
+### Update task
+PUT http://localhost:3001/tasks/752b9bae-b58f-49bc-9f4f-1b811335f321
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ODc3MmQyLWM5MjUtNGNiZi05YTg3LTUyZWNjOTgzNjQxYyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkxOTcyNzM4LCJleHAiOjE3OTE5NzYzMzh9.htIvfRxnpydF4CJ2f3-g295ytjKWI3g0a4D_JL1J_v4
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### Delete task
+DELETE http://localhost:3001/tasks/752b9bae-b58f-49bc-9f4f-1b811335f321
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ODc3MmQyLWM5MjUtNGNiZi05YTg3LTUyZWNjOTgzNjQxYyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkxOTcyNzM4LCJleHAiOjE3OTE5NzYzMzh9.htIvfRxnpydF4CJ2f3-g295ytjKWI3g0a4D_JL1J_v4

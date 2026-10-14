@@ -82,5 +82,5 @@ export async function deleteUser(id) {
         `,
     [id],
   );
-  return result.result.rows[0];
+  return result.rows[0];
 }

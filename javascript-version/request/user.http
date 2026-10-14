@@ -4,7 +4,6 @@ GET http://localhost:3001/
 
 ###Get all user
 GET http://localhost:3001/api/users
-
 ### Insert user
 POST  http://localhost:3001/api/users
 Content-Type: application/json
@@ -13,6 +12,16 @@ Content-Type: application/json
     "name": "James Dortha",
     "email": "james@gmail.com",
     "password": "userpwd-1"
+}
+
+### another user
+POST  http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "name": "Judith Bella",
+    "email": "juds@gmail.com",
+    "password": "userpwd-2"
 }
 
 ### Login

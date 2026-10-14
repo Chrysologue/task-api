@@ -99,11 +99,28 @@ userController.login = async function (req, res) {
     if (!isMatched) {
       return res.status(401).json({ error: "Invalid email or password" });
     }
-    const payload = { id: user.user_id };
+    const payload = { id: user.user_id, role: user.role };
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
     return res.status(200).json({ message: "Login successful", token });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+userController.deleteUser = async function (req, res) {
+  try {
+    const id = req.params.id;
+    if (!isValidUUID(id)) {
+      return res.status(400).json({ error: "Invalid user ID" });
+    }
+    const user = await deleteUser(id);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    return res.status(200).json({ message: "User successfully deleted", user });
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Internal server error" });

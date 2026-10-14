@@ -1,6 +1,6 @@
 import jtw from "jsonwebtoken";
 
-export default function checkUser(req, res, next) {
+export default function authMiddleware(req, res, next) {
   try {
     const authorization = req.headers.authorization;
     if (!authorization) {
