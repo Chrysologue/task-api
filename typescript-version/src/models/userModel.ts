@@ -1,5 +1,5 @@
 import pool from "../config/db.js";
-import { User, UserByEmail, UpdateUser } from "../user.js";
+import { User, UserByEmail, UpdateUser, CreateUser } from "../types/user.js";
 
 export async function getAllUsers(): Promise<User[]> {
   const results = await pool.query(
@@ -72,4 +72,13 @@ export async function updateUser(id: string, user: UpdateUser): Promise<User | n
     values
   );
   return result.rows[0];
+}
+
+export async function createUser(userData: CreateUser) : Promise<User> {
+  const result = await pool.query(`
+      INSERT INTO users(name, email, password)
+      VALUES($1, $2, $3) RETURNING user_id, name, email
+    `, [userData.name, userData.email, userData.password])
+
+    return result.rows[0]
 }
