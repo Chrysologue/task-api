@@ -1,4 +1,4 @@
-type Role = "user" | "admin"
+type Role = "user" | "admin";
 
 interface User {
   user_id: string;
@@ -18,7 +18,7 @@ interface UpdateUser {
 
 interface JwtPayload {
   id: string;
-  role: Role
+  role: Role;
 }
 
 interface CreateUser {

@@ -1,11 +1,11 @@
-import { JwtPayload } from "./user.ts"
+import { JwtPayload } from "./user.ts";
 
 declare global {
-    namespace Express{
-        interface Request {
-            user? : JwtPayload
-        }
+  namespace Express {
+    interface Request {
+      user?: JwtPayload;
     }
+  }
 }
 
-export {}
+export {};

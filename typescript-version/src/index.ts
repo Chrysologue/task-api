@@ -2,13 +2,15 @@ import "dotenv/config";
 import express from "express";
 import { Request, Response } from "express";
 import testConnection from "./models/testModel.js";
-import userRoute from './routes/userRoute.js'
+import userRoute from "./routes/userRoute.js";
+import taskRoute from "./routes/taskRoute.js";
 
 const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
-app.use("/api/users", userRoute)
+app.use("/api/users", userRoute);
+app.use("/api/tasks", taskRoute);
 
 app.get("/", (req: Request, res: Response) => {
   return res.status(200).json({ message: "Welcome to task API TypeScript version" });

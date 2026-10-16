@@ -1,0 +1,37 @@
+### Get tasks by admin
+GET http://localhost:5000/api/tasks/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmYWZjNTI3LWQ3OGItNDg3Mi1iOTU2LTJiMDFmYzM4M2U4NyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkyMTU4MjMyLCJleHAiOjE3OTIxNjE4MzJ9.s5xcDDxYM_9O5B3ZftQSav1wSE_xw2l7DgwJNKeuMTg
+
+### Get all user's tasks
+GET http://localhost:5000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmYWZjNTI3LWQ3OGItNDg3Mi1iOTU2LTJiMDFmYzM4M2U4NyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkyMTU4MjMyLCJleHAiOjE3OTIxNjE4MzJ9.s5xcDDxYM_9O5B3ZftQSav1wSE_xw2l7DgwJNKeuMTg
+
+### Get user task by ID
+GET http://localhost:5000/api/tasks/ec6e1105-03d1-4015-b89a-1f73fdc7899b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmYWZjNTI3LWQ3OGItNDg3Mi1iOTU2LTJiMDFmYzM4M2U4NyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkyMTU4MjMyLCJleHAiOjE3OTIxNjE4MzJ9.s5xcDDxYM_9O5B3ZftQSav1wSE_xw2l7DgwJNKeuMTg
+
+
+### Create task
+POST http://localhost:5000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmYWZjNTI3LWQ3OGItNDg3Mi1iOTU2LTJiMDFmYzM4M2U4NyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkyMTU4MjMyLCJleHAiOjE3OTIxNjE4MzJ9.s5xcDDxYM_9O5B3ZftQSav1wSE_xw2l7DgwJNKeuMTg
+Content-Type: application/json
+
+{
+    "title": "Write unit tests for authentication service",
+    "description": "Implement Jest test cases covering user login, token generation, and expired JWT handling with at least 85% code coverage."
+  }
+
+
+### Update task
+PUT http://localhost:5000/api/tasks/ec6e1105-03d1-4015-b89a-1f73fdc7899b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmYWZjNTI3LWQ3OGItNDg3Mi1iOTU2LTJiMDFmYzM4M2U4NyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkyMTU4MjMyLCJleHAiOjE3OTIxNjE4MzJ9.s5xcDDxYM_9O5B3ZftQSav1wSE_xw2l7DgwJNKeuMTg
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+
+### Delete task
+DELETE http://localhost:5000/api/tasks/ec6e1105-03d1-4015-b89a-1f73fdc7899b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmYWZjNTI3LWQ3OGItNDg3Mi1iOTU2LTJiMDFmYzM4M2U4NyIsInJvbGUiOiJ0YXNrX2FwaV91c2VyIiwiaWF0IjoxNzkyMTU4MjMyLCJleHAiOjE3OTIxNjE4MzJ9.s5xcDDxYM_9O5B3ZftQSav1wSE_xw2l7DgwJNKeuMTg

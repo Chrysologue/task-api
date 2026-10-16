@@ -74,11 +74,14 @@ export async function updateUser(id: string, user: UpdateUser): Promise<User | n
   return result.rows[0];
 }
 
-export async function createUser(userData: CreateUser) : Promise<User> {
-  const result = await pool.query(`
+export async function createUser(userData: CreateUser): Promise<User> {
+  const result = await pool.query(
+    `
       INSERT INTO users(name, email, password)
       VALUES($1, $2, $3) RETURNING user_id, name, email
-    `, [userData.name, userData.email, userData.password])
+    `,
+    [userData.name, userData.email, userData.password]
+  );
 
-    return result.rows[0]
+  return result.rows[0];
 }

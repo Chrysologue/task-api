@@ -9,34 +9,31 @@ POST  http://localhost:5000/api/users
 Content-Type: application/json
 
 {
-    "name": "James Dortha",
-    "email": "james@gmail.com",
-    "password": "userpwd-1"
+    "name": "Cynthia Emilie",
+    "email": "cy@gmail.com",
+    "password": "userpwd-3"
 }
 
-### another user
-POST  http://localhost:5000/api/users
-Content-Type: application/json
-
-{
-    "name": "Judith Bella",
-    "email": "juds@gmail.com",
-    "password": "userpwd-2"
-}
 
 ### Login
 POST  http://localhost:5000/api/users/login
 Content-Type: application/json
 
 {
-    "email": "james@gmail.com",
-    "password": "userpwd-1"
+    "email": "cy@gmail.com",
+    "password": "userpwd-3"
 }
 ### Update user
 
-PUT http://localhost:5000/api/users/048772d2-c925-4cbf-9a87-52ecc983641c
+PUT http://localhost:5000/api/users/0fafc527-d78b-4872-b956-2b01fc383e87
 Content-Type: application/json
 
 {
-    "name": "James Vardie Hella"
+    "name": "Cynthia Emilia"
 }
+
+### GET USER BY ID
+GET http://localhost:5000/api/users/0fafc527-d78b-4872-b956-2b01fc383e87
+
+### Delete user
+DELETE http://localhost:5000/api/users/0fafc527-d78b-4872-b956-2b01fc383e87
